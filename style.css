@@ -1,0 +1,139 @@
+/* CSS-variabelen voor basiskleuren */
+:root {
+    --primair-rood: #ce2029; /* Feyenoord-rood */
+    --primair-wit: #ffffff; /* Wit */
+    --primair-zwart: #000000; /* Zwart */
+    --secundair-grijs: #f2f2f2; /* Lichtgrijs */
+    --accent-kleur: #0077cc; /* Accentkleur voor links */
+}
+
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secundair-grijs);
+    color: var(--primair-zwart);
+}
+
+/* Header */
+header {
+    background-color: var(--primair-rood);
+    color: var(--primair-wit);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--primair-wit);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 1rem;
+}
+
+/* Secties met `nth-of-type` */
+section {
+    margin-bottom: 2rem;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--primair-wit);
+    padding: 1rem;
+    border-left: 5px solid var(--primair-rood);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--secundair-grijs);
+    padding: 1rem;
+    border-left: 5px solid var(--accent-kleur);
+}
+
+section h2 {
+    color: var(--primair-rood);
+    border-bottom: 2px solid var(--primair-rood);
+    padding-bottom: 0.5rem;
+}
+
+/* Artikelen binnen een sectie */
+article:nth-of-type(odd) {
+    background-color: var(--secundair-grijs);
+    padding: 0.5rem;
+}
+
+article:nth-of-type(even) {
+    background-color: var(--primair-wit);
+    padding: 0.5rem;
+}
+
+article h3 {
+    color: var(--primair-rood);
+}
+
+article p {
+    margin: 0.5rem 0;
+}
+
+article a {
+    color: var(--accent-kleur);
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Wedstrijd- en selectie-lijsten */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li:nth-of-type(odd) {
+    background-color: var(--primair-wit);
+    color: var(--primair-zwart);
+    padding: 0.5rem;
+}
+
+ul li:nth-of-type(even) {
+    background-color: var(--secundair-grijs);
+    color: var(--primair-zwart);
+    padding: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primair-zwart);
+    color: var(--primair-wit);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--accent-kleur);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
